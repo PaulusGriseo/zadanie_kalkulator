@@ -17,8 +17,11 @@ def operation(number_1, number_2):
         result = number_1 * number_2
 
     elif operation_type == '4':
-        logging.info(f"Dzielę {number_1} i {number_2}")
-        result = number_1 / number_2
+        if number_1 == 0 or number_2 == 0:
+            print("Nie można dzieć przez 0!")
+        elif number_1 != 0 and number_2 != 0:
+            logging.info(f"Dzielę {number_1} i {number_2}")
+            result = number_1 / number_2
     return result
 
 if __name__ == "__main__":
